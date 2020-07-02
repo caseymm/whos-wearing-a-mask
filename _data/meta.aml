@@ -1,0 +1,20 @@
+slug: bakery-demo
+
+headline: Who's wearing a mask?
+
+pub_date: 2020-07-02 12:00:00
+update_date:
+
+seo_headline: Who's wearing a mask?
+seo_description: What percentage of people in Culver City and Palms are wearing face masks correctly?
+
+social_headline: Who's wearing a mask?
+social_description: What percentage of people in Culver City and Palms are wearing face masks correctly?
+
+social_image: /assets/meta/social.png
+
+[+methodology]
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque aspernatur aperiam officia quam quidem cum quod quasi sunt quia sint fuga, dignissimos aliquid assumenda non, eum sed explicabo at.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque aspernatur aperiam officia quam quidem cum quod quasi sunt quia sint fuga, dignissimos aliquid assumenda non, eum sed explicabo at.
+[]

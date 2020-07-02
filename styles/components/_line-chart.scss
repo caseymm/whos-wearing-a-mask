@@ -1,0 +1,29 @@
+.line {
+  fill: none;
+  stroke-width: 3;
+}
+
+.age-chart {
+  .line {
+    stroke-width: 1.5px;
+  }
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+  stroke: #fff;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+.axis {
+  display: none;
+}

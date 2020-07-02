@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% import "macros/pub_dates.html" as pub_dates %}
+{% import "macros/methodology.html" as methodology %}
+
+{% block content %}
+<div class="content">
+  <header class="center">
+    <h1>{{ meta.headline }}</h1>
+    <div class="chart" id="overall-chart"></div>
+  </header>
+  <div class="container" id="info">
+    <div class="overall">
+      <p class="intro">Only <span id="total-pct"></span> of Culver City and Palms area residents we tracked are wearing their masks correctly.</p>
+      <p>Over the past <span id="days"></span> days we've tracked <span id="total-people"></span> people.</p>
+      <p>Only <span id="total-masks"></span> were wearing masks and of those only <span id="total-mask-correct"></span> were wearing them correctly.</p>
+    </div>
+    {% set age_groups = ['youth', 'young-adult', 'middle-age', 'elderly'] %}
+    <div class="age-groups">
+    {% for ag in age_groups %}
+      <div class="gp" id="block-{{ag}}">
+        <h2>{{ag.replace('-', ' ')}}</h2>
+        <div class="lg-stat"></div>
+        <p class="caption">correct</p>
+        <div class="age-chart"></div>
+        <p class="small"><span class="total-tracked"></span> tracked</p>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

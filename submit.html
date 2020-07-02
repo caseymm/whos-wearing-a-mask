@@ -1,0 +1,110 @@
+{% extends 'base-submit.html' %}
+
+{% block content %}
+<div class="container">
+  <form method="post" id="form-submit">
+    <!-- gender presentation -->
+    <h3>Gender</h3>
+    <div>
+     <input type="radio" id="male" name="gender" value="male" checked>
+     <label for="male">male</label>
+    </div>
+
+    <div>
+     <input type="radio" id="female" name="gender" value="female">
+     <label for="female">female</label>
+    </div>
+
+    <div>
+     <input type="radio" id="undisclosed" name="gender" value="undisclosed">
+     <label for="undisclosed">undisclosed</label>
+    </div>
+
+    <!-- mask -->
+    <h3>Mask</h3>
+    <div>
+     <input type="radio" id="yes" name="mask" value="yes" checked>
+     <label for="yes">yes</label>
+    </div>
+
+    <div>
+     <input type="radio" id="no" name="mask" value="no">
+     <label for="no">no</label>
+    </div>
+
+    <!-- mask worn correctly? -->
+    <h3>Mask worn correctly?</h3>
+    <div>
+     <input type="radio" id="worn-yes" name="mask_correct" value="yes" checked>
+     <label for="worn-yes">yes</label>
+    </div>
+
+    <div>
+     <input type="radio" id="worn-no" name="mask_correct" value="no">
+     <label for="worn-no">no</label>
+    </div>
+
+    <!-- Age group -->
+    <h3>Age group</h3>
+    <div>
+     <input type="radio" id="youth" name="age_group" value="youth" checked>
+     <label for="youth">youth</label>
+    </div>
+
+    <div>
+     <input type="radio" id="young-adult" name="age_group" value="young-adult">
+     <label for="young-adult">young adult</label>
+    </div>
+
+    <div>
+     <input type="radio" id="middle-age" name="age_group" value="middle-age">
+     <label for="middle-age">middle age</label>
+    </div>
+
+    <div>
+     <input type="radio" id="elderly" name="age_group" value="elderly">
+     <label for="elderly">elderly</label>
+    </div>
+
+    <!-- transportation mode -->
+    <h3>Transportation mode</h3>
+    <div>
+     <input type="radio" id="walking" name="transportation_mode" value="walking" checked>
+     <label for="walking">walking</label>
+    </div>
+
+    <div>
+     <input type="radio" id="running" name="transportation_mode" value="running">
+     <label for="running">running</label>
+    </div>
+
+    <div>
+     <input type="radio" id="biking" name="transportation_mode" value="biking">
+     <label for="biking">biking</label>
+    </div>
+
+    <div>
+     <input type="radio" id="scootering" name="transportation_mode" value="scootering">
+     <label for="scootering">scootering</label>
+    </div>
+
+    <div>
+     <input type="radio" id="skateboarding" name="transportation_mode" value="skateboarding">
+     <label for="skateboarding">skateboarding</label>
+    </div>
+
+    <!-- notes -->
+    <h3>notes</h3>
+    <div>
+     <textarea id="notes" name="notes" rows="3" cols="50"></textarea>
+    </div>
+
+    <h3>logger</h3>
+    <input type="text" id="logger" name="logger">
+
+    <button type="submit" id="submit-form">submit</button>
+    <div id="position"></div>
+
+  </form>
+</div>
+{% endblock content %}
