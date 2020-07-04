@@ -3,6 +3,14 @@ import 'intersection-observer';
 import yall from 'yall-js';
 
 console.log('submit page');
+if (sessionStorage.getItem("logger")) {
+  document.getElementById('logger').value = sessionStorage.getItem("logger");
+}
+
+if (sessionStorage.getItem("neighborhood")) {
+  document.getElementById('neighborhood').value = sessionStorage.getItem("neighborhood");
+}
+
 const form = document.getElementById('form-submit');
 const formToJSON = (elements) =>
   [].reduce.call(
@@ -19,18 +27,6 @@ const formToJSON = (elements) =>
     },
     {}
   );
-
-// const options = {
-//   enableHighAccuracy: true,
-//   maximumAge: 2000,
-//   timeout: 10000,
-// };
-//
-// const getPosition = function (options) {
-//   return new Promise(function (resolve, reject) {
-//     navigator.geolocation.getCurrentPosition(resolve, reject, options);
-//   });
-// };
 
 const post = (formJSON) => {
   fetch('https://bwb9uvadvf.execute-api.us-west-1.amazonaws.com/prod/people', {
@@ -62,19 +58,19 @@ const submitForm = (e) => {
   )}-${date.getDate()}`;
 
   formJSON.date = getFullDate;
+  formJSON.time = date;
 
-  post(formJSON);
+  if(formJSON.logger.length > 0 && formJSON.logger !== sessionStorage.getItem("logger")){
+    sessionStorage.setItem('logger', formJSON.logger);
+  }
 
-  // getPosition()
-  //   .then((position) => {
-  //     formJSON.lat = position.coords.latitude;
-  //     formJSON.lng = position.coords.longitude;
-  //     post(formJSON);
-  //   })
-  //   .catch((err) => {
-  //     console.error(err.message);
-  //     post(formJSON);
-  //   });
+  if(formJSON.neighborhood.length > 0 && formJSON.neighborhood !== sessionStorage.getItem("neighborhood")){
+    sessionStorage.setItem('neighborhood', formJSON.neighborhood);
+  }
+
+  console.log(formJSON)
+
+  // post(formJSON);
 };
 
 form.addEventListener('submit', submitForm);

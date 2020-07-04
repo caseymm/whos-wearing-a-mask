@@ -19,7 +19,6 @@ export function createChart(
   parentHeight,
   radius
 ) {
-  console.log('line chart', data);
   let groupedData = {};
   let formattedData = [];
 
@@ -31,7 +30,6 @@ export function createChart(
       groupedData[d.date] = [d];
     }
   });
-  console.log(groupedData);
 
   Object.keys(groupedData).forEach((key) => {
     const correct = groupedData[key].filter(
@@ -46,7 +44,6 @@ export function createChart(
   });
 
   formattedData.sort((a, b) => (a.date > b.date ? 1 : -1));
-  console.log(formattedData);
 
   let margin = { top: 5, right: 5, bottom: 5, left: 5 },
     width = parentWidth - margin.left - margin.right,

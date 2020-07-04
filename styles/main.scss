@@ -6,10 +6,10 @@ body {
   color: #000;
   margin: 0px;
   font-size: 18px;
+  padding:  0 15px 15px 15px;
 }
 
 .content {
-  padding: 15px;
   max-width: 900px;
   width: 100%;
   margin: auto;
@@ -27,7 +27,7 @@ h1 {
   display: inline-block;
   margin-bottom: 0px;
   @media (max-width: 500px) {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
@@ -76,7 +76,7 @@ p {
   .intro {
     font-size: 50px;
     @media (max-width: 500px) {
-      font-size: 35px;
+      font-size: 33px;
     }
   }
   span {

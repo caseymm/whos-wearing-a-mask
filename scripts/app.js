@@ -16,7 +16,7 @@ const inversePct = (items) => {
   return Math.round(((data.length - items.length) / data.length) * 100);
 };
 
-let parentWidth = 418,
+let parentWidth = 415,
   margin = { top: 10, right: 10, bottom: 10, left: 10 };
 
 if (window.innerWidth < 448) {
