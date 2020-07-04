@@ -6,6 +6,7 @@
 
     <!-- mask -->
     <h3>Mask</h3>
+    <p class='exp'>Do they have a mask on at all? This is yes even if below their chin or around their neck.</p>
     <div>
      <input type="radio" id="yes" name="mask" value="yes" checked>
      <label for="yes">yes</label>
@@ -18,6 +19,7 @@
 
     <!-- mask worn correctly? -->
     <h3>Mask worn correctly?</h3>
+    <p class='exp'>This is no if it's not covering their mouth and nose. If you see someone wearing a mask incorrectly but pull it up when they walk by someone else, mark this as correct.</p>
     <div>
      <input type="radio" id="worn-yes" name="mask_correct" value="yes" checked>
      <label for="worn-yes">yes</label>
@@ -32,25 +34,25 @@
     <h3>Age group</h3>
     <div>
      <input type="radio" id="youth" name="age_group" value="youth" checked>
-     <label for="youth">youth</label>
+     <label for="youth">youth (child - teen)</label>
     </div>
 
     <div>
      <input type="radio" id="young-adult" name="age_group" value="young-adult">
-     <label for="young-adult">young adult</label>
+     <label for="young-adult">young adult (20s - 30s)</label>
     </div>
 
     <div>
      <input type="radio" id="middle-age" name="age_group" value="middle-age">
-     <label for="middle-age">middle age</label>
+     <label for="middle-age">middle age (40s - 50s)</label>
     </div>
 
     <div>
      <input type="radio" id="elderly" name="age_group" value="elderly">
-     <label for="elderly">elderly</label>
+     <label for="elderly">elderly (60+)</label>
     </div>
 
-    <h3>logger*</h3>
+    <h3>name*</h3>
     <input type="text" id="logger" name="logger">
 
     <h3>neighborhood*</h3>
@@ -59,10 +61,12 @@
     <!-- notes -->
     <h3>notes</h3>
     <div>
-     <textarea id="notes" name="notes" rows="3" cols="50"></textarea>
+     <textarea id="notes" name="notes" rows="2" cols="50"></textarea>
     </div>
 
+    <p class='exp error'><b>Name</b> and <b>neighborhood</b> fields must be filled completed.</p>
     <button type="submit" id="submit-form">submit</button>
+    <p class='exp'>Know the rules already? <a href="/submit">Click here</a>.</p>
 
   </form>
 </div>

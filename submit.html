@@ -3,22 +3,6 @@
 {% block content %}
 <div class="container">
   <form method="post" id="form-submit">
-    <!-- gender presentation -->
-    <h3>Gender</h3>
-    <div>
-     <input type="radio" id="male" name="gender" value="male" checked>
-     <label for="male">male</label>
-    </div>
-
-    <div>
-     <input type="radio" id="female" name="gender" value="female">
-     <label for="female">female</label>
-    </div>
-
-    <div>
-     <input type="radio" id="undisclosed" name="gender" value="undisclosed">
-     <label for="undisclosed">undisclosed</label>
-    </div>
 
     <!-- mask -->
     <h3>Mask</h3>
@@ -66,44 +50,20 @@
      <label for="elderly">elderly</label>
     </div>
 
-    <!-- transportation mode -->
-    <h3>Transportation mode</h3>
-    <div>
-     <input type="radio" id="walking" name="transportation_mode" value="walking" checked>
-     <label for="walking">walking</label>
-    </div>
+    <h3>name*</h3>
+    <input type="text" id="logger" name="logger">
 
-    <div>
-     <input type="radio" id="running" name="transportation_mode" value="running">
-     <label for="running">running</label>
-    </div>
-
-    <div>
-     <input type="radio" id="biking" name="transportation_mode" value="biking">
-     <label for="biking">biking</label>
-    </div>
-
-    <div>
-     <input type="radio" id="scootering" name="transportation_mode" value="scootering">
-     <label for="scootering">scootering</label>
-    </div>
-
-    <div>
-     <input type="radio" id="skateboarding" name="transportation_mode" value="skateboarding">
-     <label for="skateboarding">skateboarding</label>
-    </div>
+    <h3>neighborhood*</h3>
+    <input type="text" id="neighborhood" name="neighborhood">
 
     <!-- notes -->
     <h3>notes</h3>
     <div>
-     <textarea id="notes" name="notes" rows="3" cols="50"></textarea>
+     <textarea id="notes" name="notes" rows="2" cols="50"></textarea>
     </div>
 
-    <h3>logger</h3>
-    <input type="text" id="logger" name="logger">
-
+    <p class='exp error'><b>Name</b> and <b>neighborhood</b> fields must be filled completed.</p>
     <button type="submit" id="submit-form">submit</button>
-    <div id="position"></div>
 
   </form>
 </div>

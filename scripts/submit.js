@@ -1,6 +1,7 @@
 // packages
 import 'intersection-observer';
 import yall from 'yall-js';
+import * as d3 from 'd3';
 
 console.log('submit page');
 if (sessionStorage.getItem("logger")) {
@@ -68,9 +69,23 @@ const submitForm = (e) => {
     sessionStorage.setItem('neighborhood', formJSON.neighborhood);
   }
 
-  console.log(formJSON)
-
-  // post(formJSON);
+  if(formJSON.logger.length === 0 || formJSON.neighborhood.length === 0){
+    d3.select('.exp.error').classed('show', true);
+    if(formJSON.logger.length === 0){
+      d3.select('#logger').classed('error', true);
+    } else {
+      d3.select('#logger').classed('error', false);
+    }
+    if(formJSON.neighborhood.length === 0){
+      d3.select('#neighborhood').classed('error', true);
+    } else {
+      d3.select('#neighborhood').classed('error', false);
+    }
+  } else {
+    d3.select('.exp.error').classed('show', false);
+    d3.selectAll('input').classed('error', false);
+    post(formJSON);
+  }
 };
 
 form.addEventListener('submit', submitForm);

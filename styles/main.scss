@@ -23,6 +23,10 @@ header {
   }
 }
 
+a{
+  color: #8e2bff;
+}
+
 h1 {
   display: inline-block;
   margin-bottom: 0px;
@@ -68,6 +72,16 @@ p {
   &.small {
     font-size: 14px;
     margin-top: -5px;
+  }
+  &.exp{
+    font-size: 14px;
+    &.error{
+      color: #e33030;
+      display: none;
+      &.show{
+        display: block;
+      }
+    }
   }
 }
 
@@ -142,6 +156,13 @@ p {
 
 form {
   padding: 10px;
+}
+
+input{
+  font-size: 18px;
+  &.error{
+    border: 2px solid #e33030;
+  }
 }
 
 button {
