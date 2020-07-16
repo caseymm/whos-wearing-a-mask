@@ -36,6 +36,11 @@ const daysBetween = () => {
 // get data
 const processData = (resp) => {
   data = JSON.parse(resp.body);
+  data.forEach(p => {
+    if(p.logger !== 'Casey' && p.logger !== 'Grumpy '){
+      console.log(p.logger)
+    }
+  })
   createChart(data, d3.select('#overall-chart'), parentWidth, 75, 5);
 
   const container = document.getElementById('info');
