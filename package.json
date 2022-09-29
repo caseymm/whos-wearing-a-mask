@@ -7,7 +7,7 @@
     "start": "NODE_ENV=development node config/serve.js"
   },
   "dependencies": {
-    "d3": "^5.16.0",
+    "d3": "^7.6.1",
     "intersection-observer": "^0.10.0",
     "yall-js": "^3.2.0"
   },
